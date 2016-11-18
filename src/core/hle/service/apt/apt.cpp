@@ -398,7 +398,9 @@ void StartLibraryApplet(Service::Interface* self) {
 
 void CancelLibraryApplet(Service::Interface* self) {
     u32* cmd_buff = Kernel::GetCommandBuffer();
-    LOG_WARNING(Service_APT, "(STUBBED) called");
+    u32 exists = cmd_buff[1];
+
+    LOG_WARNING(Service_APT, "(STUBBED) called Exists %d", exists);
     cmd_buff[1] = 1;
 }
 
