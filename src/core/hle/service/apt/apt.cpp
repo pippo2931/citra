@@ -396,6 +396,12 @@ void StartLibraryApplet(Service::Interface* self) {
     cmd_buff[1] = applet->Start(parameter).raw;
 }
 
+void CancelLibraryApplet(Service::Interface* self) {
+    u32* cmd_buff = Kernel::GetCommandBuffer();
+    LOG_WARNING(Service_APT, "(STUBBED) called");
+    cmd_buff[1] = 1;
+}
+
 void SetScreenCapPostPermission(Service::Interface* self) {
     u32* cmd_buff = Kernel::GetCommandBuffer();
 
