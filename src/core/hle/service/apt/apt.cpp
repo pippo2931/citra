@@ -400,8 +400,9 @@ void CancelLibraryApplet(Service::Interface* self) {
     u32* cmd_buff = Kernel::GetCommandBuffer();
     u32 exists = cmd_buff[1];
 
-    LOG_WARNING(Service_APT, "(STUBBED) called Exists %d", exists);
-    cmd_buff[1] = 1;
+    cmd_buff[1] = 1; // TODO: Find the return code meaning
+
+    LOG_WARNING(Service_APT, "(STUBBED) called exists %u", exists);
 }
 
 void SetScreenCapPostPermission(Service::Interface* self) {
