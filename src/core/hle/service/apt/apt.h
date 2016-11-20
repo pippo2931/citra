@@ -384,10 +384,10 @@ void StartLibraryApplet(Service::Interface* self);
  * APT::CancelLibraryApplet service function
  *  Inputs:
  *      0 : Command header [0x003B0040]
- *      1 : u8, Exists (0 = does not exist, 1 = exists)
+ *      1 : u8, Application Exiting (0 = not exiting, 1 = exiting) 
  *  Outputs:
- *      0 : Return header
- *      1 : Result of function, 0 on success, otherwise error code
+ *      0 : Header code
+ *      1 : Result code
  */
 void CancelLibraryApplet(Service::Interface* self);
 

@@ -398,11 +398,11 @@ void StartLibraryApplet(Service::Interface* self) {
 
 void CancelLibraryApplet(Service::Interface* self) {
     u32* cmd_buff = Kernel::GetCommandBuffer();
-    u32 exists = cmd_buff[1];
+    u32 exiting = cmd_buff[1] & 0XFF;
 
     cmd_buff[1] = 1; // TODO: Find the return code meaning
 
-    LOG_WARNING(Service_APT, "(STUBBED) called exists %u", exists);
+    LOG_WARNING(Service_APT, "(STUBBED) called exiting=%u", exiting);
 }
 
 void SetScreenCapPostPermission(Service::Interface* self) {
