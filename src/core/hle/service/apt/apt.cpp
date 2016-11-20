@@ -398,7 +398,7 @@ void StartLibraryApplet(Service::Interface* self) {
 
 void CancelLibraryApplet(Service::Interface* self) {
     u32* cmd_buff = Kernel::GetCommandBuffer();
-    u32 exiting = cmd_buff[1] & 0XFF;
+    u32 exiting = cmd_buff[1] & 0xFF;
 
     cmd_buff[1] = 1; // TODO: Find the return code meaning
 

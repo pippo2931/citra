@@ -384,7 +384,7 @@ void StartLibraryApplet(Service::Interface* self);
  * APT::CancelLibraryApplet service function
  *  Inputs:
  *      0 : Command header [0x003B0040]
- *      1 : u8, Application Exiting (0 = not exiting, 1 = exiting)
+ *      1 : u8, Application exiting (0 = not exiting, 1 = exiting)
  *  Outputs:
  *      0 : Header code
  *      1 : Result code
